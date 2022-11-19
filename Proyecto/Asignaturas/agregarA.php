@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
     
       <!-- Latest compiled and minified CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -51,54 +50,29 @@
     <!-- Fin Navbar -->
 <!--Contenido-->
 
-<ul id="menu">
-    
-   <li><input type="checkbox" name="list" id="nivel1-1"><label for="nivel1-1">Programacion imperativa</label><!--Materias-->
-   <ul class="interior">
-         <li><input type="checkbox" name="list" id="nivel2-1"><label for="nivel2-1">Nivel 2</label>
-           <ul class="interior">
-             <li><a href="#r">Nivel 3</a></li>
-             <li><a href="#r">Nivel 3</a></li>
-            </ul>
-         </li>
-         <li><input type="checkbox" name="list" id="nivel2-2"><label for="nivel2-2">Nivel 2</label>
-           <ul class="interior">
-             <li><a href="#r">Nivel 3</a></li>
-             <li><a href="#r">Nivel 3</a></li>
-             <li><a href="#r">Nivel 3</a></li>
-             <li><a href="#r">Nivel 3</a></li>
-            </ul>
-         </li>
-         <li><a href="#r">Nivel 2</a></li>
-      </ul>
-   </li>
-   <li><input type="checkbox" name="list" id="nivel1-2" checked=""><label for="nivel1-2">Nivel 1</label>
-      <ul class="interior">
-         <li><a href="#r">Nivel 2</a></li>
-         <li><input type="checkbox" name="list" id="nivel2-3"><label for="nivel2-3">Nivel 2</label>
-           <ul class="interior">
-             <li><a href="#r">Nivel 3</a></li>
-             <li><a href="#r">Nivel 3</a></li>
-            </ul>
-         </li>
-         <li><input type="checkbox" name="list" id="nivel2-4"><label for="nivel2-4">Nivel 2</label>
-         <ul class="interior">
-             <li><a href="#r">Nivel 3</a></li>
-             <li><a href="#r">Nivel 3</a></li>
-             <li><a href="#r">Nivel 3</a></li>
-            </ul>
-         </li>
-      </ul>
-   </li>
-   <li><a href="#r">Nivel 1</a></li>
-</ul>
+<h3 class="text-center mt-4 pt-5">Registrar asignatura</h3>
 
+<div class=" container-xxl m-2">
 
+<div class="container d-flex justify-content-center align-items-center ">
 
+    <form class="row g-2 ms-5 me-5 ps-5 pe-5 " action="agregarEnA.php" method="POST"><br>
+        ingrese una asignatura: <input class="form-control" type="text" name="Asig" id="Asig">
+        
+       
+        <a class="btn btn-dark" href="../admin">Volver</a>
+        <input class="btn btn-secondary" type="submit" value="Registrar">
+        </form>
+    </div>
+</div>
+</div>
+
+</body> 
+   
 
 <!--fin contenido-->
 
-</body>
+
 
 <footer class="bg-dark text-center text-white">
     <!-- Copyright -->
