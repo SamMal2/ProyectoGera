@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link href="style.css" rel="stylesheet">
     
       <!-- Latest compiled and minified CSS -->
@@ -51,61 +50,66 @@
     <!-- Fin Navbar -->
 <!--Contenido-->
 
-<ul id="menu">
+
+<div class=" justify-content-center ms-5 mt-5 pt-3" >
+
+
+
+<h3 class="text-center">Asignaturas</h3>
     
-   <li><input type="checkbox" name="list" id="nivel1-1"><label for="nivel1-1">Programacion imperativa</label><!--Materias-->
-   <ul class="interior">
-         <li><input type="checkbox" name="list" id="nivel2-1"><label for="nivel2-1">Nivel 2</label>
-           <ul class="interior">
-             <li><a href="#r">Nivel 3</a></li>
-             <li><a href="#r">Nivel 3</a></li>
-            </ul>
-         </li>
-         <li><input type="checkbox" name="list" id="nivel2-2"><label for="nivel2-2">Nivel 2</label>
-           <ul class="interior">
-             <li><a href="#r">Nivel 3</a></li>
-             <li><a href="#r">Nivel 3</a></li>
-             <li><a href="#r">Nivel 3</a></li>
-             <li><a href="#r">Nivel 3</a></li>
-            </ul>
-         </li>
-         <li><a href="#r">Nivel 2</a></li>
-      </ul>
-   </li>
-   <li><input type="checkbox" name="list" id="nivel1-2" checked=""><label for="nivel1-2">Nivel 1</label>
-      <ul class="interior">
-         <li><a href="#r">Nivel 2</a></li>
-         <li><input type="checkbox" name="list" id="nivel2-3"><label for="nivel2-3">Nivel 2</label>
-           <ul class="interior">
-             <li><a href="#r">Nivel 3</a></li>
-             <li><a href="#r">Nivel 3</a></li>
-            </ul>
-         </li>
-         <li><input type="checkbox" name="list" id="nivel2-4"><label for="nivel2-4">Nivel 2</label>
-         <ul class="interior">
-             <li><a href="#r">Nivel 3</a></li>
-             <li><a href="#r">Nivel 3</a></li>
-             <li><a href="#r">Nivel 3</a></li>
-            </ul>
-         </li>
-      </ul>
-   </li>
-   <li><a href="#r">Nivel 1</a></li>
-</ul>
+    <div class="container justify-content-center align-items-center ">
+
+    <div class="container mt-1">         
+  <table class="table mt-5">
+    <thead> 
+      <tr class="table-dark">
+        <th>Asignaturas</th>
+    </table>
+
+<tbody>
+
+<?php
+        $connection = mysqli_connect("localhost", "root", "", "materias");
+        if($connection->connect_error){
+            die("conexion fallda: ". $conn->connect_error);
+        }
+        $sql = "SELECT * FROM tasignatura";
+        $query = mysqli_query($connection, $sql);
+        while ($row = mysqli_fetch_array($query)){
+            
+            ?>
+                <tr>
+                    <th class="table-primary"><a href="#"><?php echo $row['Asignatura'] ?></a></th><br>
+                    
+                    
+                    <br>
+                </tr>
+                
+            <?php
+            }
+            ?>
+</tbody>
+<a class="btn btn-dark m-3" href="index.php">Salir</a>
+<a class="btn btn-dark m-3" href="Asignaturas/agregarA.php">Insertar</a>
 
 
+</div>
+</div>
+</div>
 
+</body> 
+   
 
 <!--fin contenido-->
 
-</body>
+
 
 <footer class="bg-dark text-center text-white">
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
     © 2020 Copyright:
     <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-  </div>
+</div>
   <!-- Copyright -->
 
 </footer>
